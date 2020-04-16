@@ -7,4 +7,4 @@ This is a Currency Converter App using Flask and Webscraping
 4. Install Requirements Package `pip install -r requirements.txt`
 5. Finally Run The Project `python converter.py`
 
-![cca](https://user-images.githubusercontent.com/39632170/79431793-b857e980-7fec-11ea-99d3-4ab30224ec37.png)
+![prev](https://user-images.githubusercontent.com/39632170/79432218-564bb400-7fed-11ea-96d9-728ec71b868c.png)
