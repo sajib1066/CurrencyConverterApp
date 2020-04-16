@@ -42,11 +42,14 @@
                         
                     </form>
                 </div>
-                {% with messages = get_flashed_messages() %}
-                {% if messages %}
-                  <span style="color: green;">{{ messages[0] }}</span>
-                {% endif %}
-              {% endwith %}
+                <div style="margin-right: 400px; text-align: right;">
+                  {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                      <span style="color: green;">{{ messages[0] }}</span>
+                    {% endif %}
+                  {% endwith %}
+                </div>
+                
             </div>
         </div>
     </div>

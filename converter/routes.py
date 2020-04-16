@@ -22,6 +22,6 @@ def home():
         else:
             data = response.json()
             total = quantity*data['rates'][currency]
-            flash(f"{quantity} {base} = {total} {currency} day of {date}")
+            flash("{} {} = {:.2f} {} day of {}".format(quantity, base, total, currency, date))
 
     return render_template('home.html', form=forms)
