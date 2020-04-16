@@ -8,35 +8,41 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Currency Converter App</title>
   </head>
   <body>
     
 
-    <div class="container">
-        <div class="card">
-            <div class="card-header"><h2 style="text-align: center;">Currency Converter App</h2></div>
+    <div class="container" style="background-color: #00CED1	;">
+        <div class="card" style="background-color: #00CED1	;">
+            <div class="card-header"><h2 style="text-align: center; color: red;">Currency Converter App</h2></div>
             <div class="card-body">
-                <div style="margin-right: 400px;">
-                    <form action="" method="post" style="text-align: right;">
+                <div style="margin: auto; width: 500px;">
+                    <form action="" method="post" style="text-align: center;">
                         {{ form.hidden_tag() }}
-                        <p>
+                        <div class="form-group">
                             {{ form.date.label }}
-                            {{ form.date() }}
-                        </p>
-                        <p>
-                            From {{ form.base() }}
-                        </p>
-                        <p>
-                            To {{ form.currency() }}
-                        </p>
-                        <p>
-                            {{ form.quantity.label }}
-                            {{ form.quantity() }}
-                        </p>
-                        <p>
-                            {{ form.submit() }}
-                        </p>
+                            {{ form.date(class="form-control") }}
+                            {% for error in form.date.errors %}
+                              <span style="color: red;">{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group">
+                          From {{ form.base(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                          To {{ form.currency(class="form-control") }}
+                        </div>
+                        <div class="form-group">
+                          {{ form.quantity.label }}
+                          {{ form.quantity(class="form-control") }}
+                          {% for error in form.quantity.errors %}
+                              <span style="color: red;">{{ error }}</span>
+                          {% endfor %}
+                        </div>
+                        <div class="form-group">
+                          {{ form.submit(class="form-control btn btn-primary") }}
+                        </div>
                         
                     </form>
                 </div>
@@ -48,6 +54,9 @@
                   {% endwith %}
                 </div>
                 
+            </div>
+            <div class="card-footer">
+              <h4 style="text-align: center;">Develop By: <a href="https://bit.ly/33Fb5gA" target="_blank">Sajib Hossain</a></h4>
             </div>
         </div>
     </div>
